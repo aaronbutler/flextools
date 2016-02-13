@@ -1,3 +1,4 @@
+@media only screen and (min-width: 961px) {
 html {
 	width: 100%;
 	height: 100%;
@@ -56,4 +57,59 @@ body {
 
 .subNavitem {
 	padding: 0.5em;
+}
+}
+
+@media only screen and (max-width: 960px) {
+	body {
+		width: 100%;
+	}
+
+	.header {
+		border: 1px solid red;
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	.logoByline {
+		display: flex;
+		flex-flow: column wrap;
+	}
+
+	.mainNav {
+		cursor: pointer;
+		margin-left: auto;
+	}
+
+	.mainNav:before {
+		content: 'hamburger';
+	}
+
+	.navList {
+		display: none;
+	}
+
+	.subNavlist {
+		display: none;
+	}
+
+	.mainNav:hover .navList {
+		position: absolute;
+		display: flex;
+		flex-flow: column wrap;
+	}
+
+	.navItem {
+		cursor: pointer;
+		list-style: none;
+		margin-left: -2.5em;
+	}
+
+	.navItem:hover .subNavlist {
+		display: flex;
+		flex-flow: column wrap;
+		position: absolute;
+		margin-left: -3em;
+		margin-top: -2em;
+	}
 }
